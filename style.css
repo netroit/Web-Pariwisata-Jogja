@@ -946,3 +946,76 @@ img { display: block; }
     color: var(--text-mid);
     font-weight: 400;
 }
+
+/* =========================================
+   PENGATURAN RESPONSIVE UNTUK HP (MOBILE)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Mengubah layout utama dari Kiri-Kanan menjadi Atas-Bawah */
+    .wrapper {
+        flex-direction: column;
+    }
+
+    /* Mengatur ulang Sidebar menjadi Header di atas */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px 20px 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .main-area {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Menyesuaikan ukuran padding dan teks di Header */
+    .header {
+        padding: 60px 30px 50px;
+    }
+
+    .header h1 {
+        font-size: 2.8rem;
+    }
+
+    .content {
+        padding: 40px 20px;
+    }
+
+    /* Memaksa Grid menjadi 1 kolom (berjejer ke bawah) */
+    .pinterest-grid,
+    .arts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menyesuaikan layout Halaman Profil dan Kontak */
+    .flex-row,
+    .contact-layout {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .facts-row {
+        flex-direction: column;
+    }
+
+    .student-card {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .student-avatar {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+    
+    .student-contacts {
+        align-items: center;
+        text-align: left;
+    }
+}
